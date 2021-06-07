@@ -1,5 +1,3 @@
-# Spring-Boot-Service-Components
+# Spring-Boot-Exception Handling 
 
-An example of Service Components in Spring Boot.
-
-Using _@Service annotation_, a java class represents business logic which is seperated from _@RestController_ classes.
+The applicaiton represents the concept of exception handling that focuses on _Run-Time Exceptions_.
