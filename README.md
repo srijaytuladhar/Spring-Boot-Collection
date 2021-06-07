@@ -1,5 +1,5 @@
-# Spring-Boot-Service-Components
+# Spring-Boot-CORS
 
-An example of Service Components in Spring Boot.
+An example of Cross-Origin Resource Sharing (CORS).
 
-Using _@Service annotation_, a java class represents business logic which is seperated from _@RestController_ classes.
+Using _@CrossOrigin_ annotation, the access to the REST API can be restricted to certain port.
