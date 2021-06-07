@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX | Students</title>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON("http://localhost:8080/students/1", function(result){
+                $.each(result, function(key,value) {
+                    $("#studentsJson").append(value + " ");
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                var studentModel = {
+                id : "3",
+                name : "Shyam Gurung",
+                age : 23,
+                email : "shyam@spring.com"
+                };
+                var requestJSON = JSON.stringify(studentModel);
+                $.ajax({
+                    type : "POST",
+                    url : "http://localhost:8080/students",
+                    headers : {
+                    "Content-Type" : "application/json"
+                    },
+                    data : requestJSON,
+                    success : function(data) {
+                    alert("Student added successfully!!");
+                    },
+                    error : function(data) {
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+
+<body>
+    <h2>Retrieving Student with ID: 1</h2>
+    <div id="studentsJson">
+    </div>
+    <hr>
+    <h2>Click the button to add a Student</h2>
+    <button>Add Student</button>
+</body>
+</html>

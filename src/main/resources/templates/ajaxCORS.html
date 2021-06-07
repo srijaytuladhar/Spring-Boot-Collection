@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX | Students</title>
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON("http://localhost:9090/foods/", function(result){
+                $.each(result, function(key,value) {
+                    $("#studentsJson").append(value.id + " " + value.name + "<br>");
+                });
+            });
+        });
+    </script>
+</head>
+
+
+<body>
+    <h2>Demo for CORS</h2>
+    <div id="studentsJson">
+    </div>
+    <hr>
+
+</body>
+</html>
