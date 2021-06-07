@@ -1,4 +1,4 @@
-# Spring-Boot-Multiple-Applicaiton-Properties
+# Spring-Boot-Multiple-Application-Properties
 
 A demo for using multiple application properties file.
 
